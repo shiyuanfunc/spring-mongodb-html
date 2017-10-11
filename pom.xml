@@ -44,18 +44,6 @@
           <artifactId>jstl</artifactId>
           <version>1.2</version>
       </dependency>
-      <!--servlet、jsp-api-->
-      <dependency>
-          <groupId>org.apache.tomcat</groupId>
-          <artifactId>tomcat-servlet-api</artifactId>
-          <version>8.0.5</version>
-      </dependency>
-      <dependency>
-          <groupId>javax.servlet.jsp</groupId>
-          <artifactId>jsp-api</artifactId>
-          <version>2.2</version>
-          <classifier>javadoc</classifier>
-      </dependency>
       <!--mysql 5.1.5-->
       <dependency>
           <groupId>mysql</groupId>
@@ -146,40 +134,13 @@
           <version>1.7.3</version>
       </dependency>
 
-      <!-- Spring 整合Shiro需要的依赖 -->
-      <dependency>
-          <groupId>org.apache.shiro</groupId>
-          <artifactId>shiro-core</artifactId>
-          <version>1.2.1</version>
-      </dependency>
-      <dependency>
-          <groupId>org.apache.shiro</groupId>
-          <artifactId>shiro-web</artifactId>
-          <version>1.2.1</version>
-      </dependency>
-      <dependency>
-          <groupId>org.apache.shiro</groupId>
-          <artifactId>shiro-ehcache</artifactId>
-          <version>1.2.1</version>
-      </dependency>
-      <dependency>
-          <groupId>org.apache.shiro</groupId>
-          <artifactId>shiro-spring</artifactId>
-          <version>1.2.1</version>
-      </dependency>
-
       <!-- 处理Excel -->
-
       <dependency>
           <groupId>net.sourceforge.jexcelapi</groupId>
           <artifactId>jxl</artifactId>
           <version>2.6.12</version>
       </dependency>
-      <dependency>
-          <groupId>org.springframework</groupId>
-          <artifactId>spring-webmvc</artifactId>
-          <version>4.0.2.RELEASE</version>
-      </dependency>
+
       <dependency>
           <groupId>org.apache.poi</groupId>
           <artifactId>poi</artifactId>
@@ -199,18 +160,32 @@
           <version>2.5.2</version>
       </dependency>
 
-
+      <!-- mongoDB支持jar -->
       <dependency>
-          <groupId>org.springframework</groupId>
-          <artifactId>spring-context-support</artifactId>
-          <version>4.1.6.RELEASE</version>
+          <groupId>org.springframework.data</groupId>
+          <artifactId>spring-data-mongodb</artifactId>
+          <version>1.8.0.RELEASE</version>
       </dependency>
-
+        <!--   spring 整合 mongodb 需要的jar -->
       <dependency>
-          <groupId>org.freemarker</groupId>
-          <artifactId>freemarker</artifactId>
-          <version>2.3.20</version>
+          <groupId>org.mongodb</groupId>
+          <artifactId>mongo-java-driver</artifactId>
+          <version>3.4.3</version>
+          <type>jar</type>
+          <scope>compile</scope>
       </dependency>
+      <!-- java 代码中链接mongdb  这一块 注释掉也可以
+  <dependency>
+              <groupId>org.mongodb</groupId>
+              <artifactId>mongodb-driver</artifactId>
+              <version>3.4.1</version>
+          </dependency>
+
+          <dependency>
+              <groupId>org.mongodb</groupId>
+              <artifactId>bson</artifactId>
+              <version>3.4.1</version>
+          </dependency>-->
 
   </dependencies>
   <build>

@@ -9,8 +9,8 @@
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
-       xsi:schemaLocation="
-        http://www.springframework.org/schema/context
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xsi:schemaLocation="http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/util
         http://www.springframework.org/schema/util/spring-util.xsd
@@ -23,7 +23,7 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://mybatis.org/schema/mybatis-spring
-        http://mybatis.org/schema/mybatis-spring.xsd">
+        http://mybatis.org/schema/mybatis-spring.xsd http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
     <!--mybatis扫描mapper包中的所有接口当做mapper-->
     <mybatis:scan base-package="com.soft863.dao"/>
     <!--spring扫描的黑名单-->
@@ -57,4 +57,5 @@
     <!--基于注解的事务开启-->
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
+    <import resource="mongdb-context.xml"/>
 </beans>
