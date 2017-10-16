@@ -1,6 +1,8 @@
 package com.song.dao;
 
 import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
+import com.mongodb.DBObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
@@ -23,6 +25,10 @@ public class DaoTest implements IDaoTest{
         long count = test.count();
         System.out.println(count);
         System.out.println(test);
+        DBCursor dbObjects = test.find();
+        for (DBObject dbObject : dbObjects){
+            System.out.println(dbObject);
+        }
 
     }
 }
