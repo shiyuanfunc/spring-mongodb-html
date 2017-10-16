@@ -8,6 +8,7 @@ import org.bson.BSONObject;
 import org.bson.BasicBSONObject;
 import org.bson.Document;
 
+import java.math.BigInteger;
 import java.net.UnknownHostException;
 
 /**
@@ -59,7 +60,12 @@ public class TestMongdb {
                 System.out.println(db.toString());
             }
 
+            //≤‚ ‘“ªœ¬  add  subtract multiply divide
 
+            BigInteger a = new BigInteger("12345");
+            BigInteger b = new BigInteger("-12345");
+            BigInteger add = a.add(b);
+            System.out.println(add);
         } catch (Exception e) {
             e.printStackTrace();
         }
